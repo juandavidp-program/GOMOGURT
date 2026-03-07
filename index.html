@@ -1,0 +1,125 @@
+<!doctype html><html><head> 
+  <meta name="author" content="JuanDavidP"> 
+  <meta name="description" content="Pagina de gomogurt oficial"> 
+  <meta charset="UTF-8"> 
+  <title>GOMOGURT</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+  <link rel="stylesheet" type="text/css" href="index.css"> 
+  <script src="index.js"></script> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: aqua;
+  overflow-x: hidden;
+  font-family: arial, sans-serif;
+  transition: all 1s ease;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background:white;
+  width: 150px;
+  height: 385px;
+  margin-top:15px;
+  border-radius: 50px;
+  padding:20px;
+  width:200px;
+  animation: cambi 8s ease infinite;
+}
+
+input::placeholder {
+  color:black;
+}
+
+@keyframes cambi {
+  0% {
+    box-shadow: 0 0 35px 5px rgba(255,0,0);
+  }
+  33% {
+    box-shadow: 0 0 35px 5px rgba(0,255,0);
+  }
+  66% {
+    box-shadow: 0 0 35px 5px rgba(0,0,255);
+  }
+  100% {
+    box-shadow: 0 0 35px 5px rgba(255,0,0);
+  }
+}
+
+h1 {
+  color:black;
+  margin-top:70px;
+  text-decoration: overline;
+  letter-spacing:3px;
+  transition: all 1s ease;
+}
+
+input[type="text"], input[type="number"] {
+  font-family:10px;
+  border-radius:25px;
+  padding:8px;
+  border: 2px solid aqua;
+}
+
+button[type="submit"] {
+  border: 2px solid green;
+  border-radius: 25px;
+  background-color: white;
+  margin-left:41px;
+  font-size: 23px;
+  margin-top:35px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  user-select:none;
+}
+
+button[type="submit"]:hover:active {
+  transform: scale(1.1);
+  color:white;
+  background:green;
+  box-shadow:0 0 35px 1px rgba(0, 255,0);</style></head> 
+ <body> 
+  <button type="button" id="cambiar_light" style="border-radius:25px; display:none; border: 1px solid white; color:white; background:aqua; margin-left:auto; padding:4px; font-size:17px">Light</button> 
+  <button type="button" id="cambiar_dark" style="border-radius:25px; border: 1px solid black; background:aqua; margin-left:auto; padding:4px; font-size:17px">Dark</button> 
+  <h1 id="titulo">GOMOGURT</h1> 
+  <div class="div"> 
+   <h3>¡PIDE EL TUYO! </h3> 
+   <form action="https://formspree.io/f/xnjgaead" method="post"> 
+    <input type="text" required name="Nombre:" placeholder="Nombre:"> 
+    <input type="text" required name="Direccion:" placeholder="Direccion:" style="margin-top:20px;"> 
+    <input type="number" required name="Cantidad de Yogurt:" placeholder="Cantidad:" style="margin-top:20px;"> 
+    <input type="number" required name="Numero telefonico:" placeholder="Numero de telefono:" style="margin-top:25px;"> 
+    <button type="submit"> Siguiente</button> 
+   </form> 
+  </div> 
+  <a id="enla" style="transition: all 1s ease; margin-top:40px;" href="https://www.facebook.com/share/1Tr2NGCWUi/">FACEBOOK</a> 
+ 
+<script type="text/javascript" id="dcoder_script">var btndark = document.getElementById("cambiar_dark");
+var btnlight = document.getElementById("cambiar_light");
+var titulo = document.getElementById("titulo");
+var btnlinks = document.getElementById("enla");
+
+function light(){
+  document.body.style.backgroundColor = "aqua";
+  btnlight.style.display = "none";
+  btndark.style.display = "block";
+  titulo.style.color = "black";
+  btnlinks.style.color = "black";
+}
+
+function dark(){
+  document.body.style.backgroundColor = "black"
+  btnlight.style.display = "block";
+  btndark.style.display = "none";
+  btnlight.style.background = "black";
+  titulo.style.color = "white";
+  btnlinks.style.color = "white";
+}
+
+btndark.addEventListener("click", dark);
+btnlight.addEventListener("click", light);</script></body></html>
