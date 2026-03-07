@@ -18,8 +18,9 @@
 }
 
 img {
-  width:80px;
-  height:120px;
+  width:130px;
+  height:130px;
+  transition: all 1s ease;
 }
 
 .div {
@@ -30,7 +31,7 @@ img {
   background:white;
   width: 150px;
   height: 385px;
-  margin-top:15px;
+  margin-top:40px;
   border-radius: 50px;
   padding:20px;
   width:200px;
@@ -54,14 +55,6 @@ input::placeholder {
   100% {
     box-shadow: 0 0 35px 5px rgba(255,0,0);
   }
-}
-
-h1 {
-  color:black;
-  margin-top:70px;
-  text-decoration: overline;
-  letter-spacing:3px;
-  transition: all 1s ease;
 }
 
 input[type="text"], input[type="number"] {
@@ -89,10 +82,9 @@ button[type="submit"]:hover:active {
   background:green;
   box-shadow:0 0 35px 1px rgba(0, 255,0);</style></head> 
  <body> 
-  <img src="6ab9fed9-b2e6-4456-afd6-1324df407601.png"> 
   <button type="button" id="cambiar_light" style="border-radius:25px; display:none; border: 1px solid white; color:white; background:aqua; margin-left:auto; padding:4px; font-size:17px">Light</button> 
   <button type="button" id="cambiar_dark" style="border-radius:25px; border: 1px solid black; background:aqua; margin-left:auto; padding:4px; font-size:17px">Dark</button> 
-  <h1 id="titulo">GOMOGURT</h1> 
+  <img id="logo" src="6ab9fed9-b2e6-4456-afd6-1324df407601.png"> 
   <div class="div"> 
    <h3>¡PIDE EL TUYO! </h3> 
    <form action="https://formspree.io/f/xnjgaead" method="post"> 
@@ -109,6 +101,7 @@ button[type="submit"]:hover:active {
 var btnlight = document.getElementById("cambiar_light");
 var titulo = document.getElementById("titulo");
 var btnlinks = document.getElementById("enla");
+var imglogo = document.getElementById("logo");
 
 function light(){
   document.body.style.backgroundColor = "aqua";
@@ -116,6 +109,7 @@ function light(){
   btndark.style.display = "block";
   titulo.style.color = "black";
   btnlinks.style.color = "black";
+  imglogo.src = "6ab9fed9-b2e6-4456-afd6-1324df407601.png"
 }
 
 function dark(){
@@ -125,6 +119,7 @@ function dark(){
   btnlight.style.background = "black";
   titulo.style.color = "white";
   btnlinks.style.color = "white";
+  imglogo.src = "0810d747-4deb-4f4c-8096-4952a611f11e.png";
 }
 
 btndark.addEventListener("click", dark);
