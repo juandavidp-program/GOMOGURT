@@ -97,21 +97,25 @@ button[type="submit"]:hover:active {
     <button type="submit"> Siguiente</button> 
    </form> 
   </div> 
-  <h6 id="enla" style="transition: all 1s ease; margin-top:30px;">¡Encuentranos en nuestras redes sociales!</h6>
-  <a id="enla" style="transition: all 1s ease; margin-top:-10px;" href="https://www.facebook.com/share/1Tr2NGCWUi/">FACEBOOK</a> 
-  <a id="enla" style="transition: all 1 s ease; margin-top:15px;" href="https://www.tiktok.com/@gomogurt?_r=1&amp;_t=ZS-94UmydW99Gh">TIKTOK</a>
+  <h6 id="enla-1" style="transition: all 1s ease; margin-top:30px;">¡Encuentranos en nuestras redes sociales!</h6>
+  <a id="enla-2" style="transition: all 1s ease; margin-top:-10px;" href="https://www.facebook.com/share/1Tr2NGCWUi/">FACEBOOK</a> 
+  <a id="enla-3" style="transition: all 1s ease; margin-top:15px;" href="https://www.tiktok.com/@gomogurt?_r=1&amp;_t=ZS-94UmydW99Gh">TIKTOK</a>
  
 <script type="text/javascript" id="dcoder_script">var btndark = document.getElementById("cambiar_dark");
 var btnlight = document.getElementById("cambiar_light");
 var titulo = document.getElementById("titulo");
-var btnlinks = document.getElementById("enla");
+var btnlinks1 = document.getElementById("enla-1");
+var btnlinks2 = document.getElementById("enla-2");
+var btnlinks3 = document.getElementById("enla-3");
 var imglogo = document.getElementById("logot");
 
 function light(){
   document.body.style.backgroundColor = "aqua";
   btnlight.style.display = "none";
   btndark.style.display = "block";
-  btnlinks.style.color = "black";
+  btnlinks1.style.color = "black";
+  btnlinks2.style.color = "black";
+  btnlinks3.style.color = "black";
   imglogo.src = "6ab9fed9-b2e6-4456-afd6-1324df407601.png";
 }
 
@@ -120,7 +124,9 @@ function dark(){
   btnlight.style.display = "block";
   btndark.style.display = "none";
   btnlight.style.background = "black";
-  btnlinks.style.color = "white";
+  btnlinks1.style.color = "white";
+  btnlinks2.style.color = "white";
+  btnlinks3.style.color = "white";
   imglogo.src = "0810d747-4deb-4f4c-8096-4952a611f11e.png";
 }
 
