@@ -18,6 +18,11 @@
   font-family: arial, sans-serif;
 }
 
+#enla-4 {
+  transition: all 1s ease;
+  margin-top:9px;
+}
+
 .carga {
   display:flex;
   align-items: center;
@@ -98,7 +103,7 @@ button[type="submit"]:hover:active {
  <body> 
   <div class="carga" id="carga">
     CARGANDO... 
-  </div> 
+  </div>
   <button type="button" id="cambiar_light" style="border-radius:25px; display:none; border: 1px solid white; color:white; background:aqua; margin-left:auto; padding:4px; font-size:17px">Light</button> 
   <button type="button" id="cambiar_dark" style="border-radius:25px; border: 1px solid black; background:aqua; margin-left:auto; padding:4px; font-size:17px">Dark</button> 
   <img id="logot" src="6ab9fed9-b2e6-4456-afd6-1324df407601.png"> 
@@ -114,7 +119,8 @@ button[type="submit"]:hover:active {
   </div> 
   <h6 id="enla-1" style="transition: all 1s ease; margin-top:30px;">¡Encuentranos en nuestras redes sociales!</h6> 
   <a id="enla-2" style="transition: all 1s ease; margin-top:-10px;" href="https://www.facebook.com/share/1Tr2NGCWUi/">FACEBOOK</a> 
-  <a id="enla-3" style="transition: all 1s ease; margin-top:15px;" href="https://www.tiktok.com/@gomogurt?_r=1&amp;_t=ZS-94UmydW99Gh">TIKTOK</a> 
+  <a id="enla-3" style="transition: all 1s ease; margin-top:8px;" href="https://www.tiktok.com/@gomogurt?_r=1&amp;_t=ZS-94UmydW99Gh">TIKTOK</a> 
+  <a href="https://wa.me/573011246134" id="enla-4">CONTACTANOS POR WSP</a>
  
 <script type="text/javascript" id="dcoder_script">var btndark = document.getElementById("cambiar_dark");
 var btnlight = document.getElementById("cambiar_light");
@@ -122,6 +128,7 @@ var titulo = document.getElementById("titulo");
 var btnlinks1 = document.getElementById("enla-1");
 var btnlinks2 = document.getElementById("enla-2");
 var btnlinks3 = document.getElementById("enla-3");
+var btnws = document.getElementById("enla-4")
 var imglogo = document.getElementById("logot");
 var ptlcarga = document.getElementById("carga");
 
@@ -133,6 +140,7 @@ function light(){
   btnlinks1.style.color = "black";
   btnlinks2.style.color = "black";
   btnlinks3.style.color = "black";
+  btnws.style.color = "black";
   imglogo.src = "6ab9fed9-b2e6-4456-afd6-1324df407601.png";
 }
 
@@ -144,6 +152,7 @@ function dark(){
   btnlinks1.style.color = "white";
   btnlinks2.style.color = "white";
   btnlinks3.style.color = "white";
+  btnws.style.color = "white"
   imglogo.src = "0810d747-4deb-4f4c-8096-4952a611f11e.png";
 }
 
