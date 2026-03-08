@@ -12,24 +12,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: aqua;
+  background: black;
   overflow-x: hidden;
+  overflow-y: hidden;
   font-family: arial, sans-serif;
-  transition: all 1s ease;
 }
 
-#carga {
+.carga {
   display:flex;
   align-items: center;
   justify-content: center;
   background: black;
   color:white;
-  font-size:30px;
+  font-size: 40px;
   position:absolute;
   width:100%;
   height:500%;
 }
-   
+
 img {
   margin-top:-54px;
   width:280px;
@@ -96,7 +96,9 @@ button[type="submit"]:hover:active {
   background:green;
   box-shadow:0 0 35px 1px rgba(0, 255,0);</style></head> 
  <body> 
-  <div id="carga">CARGANDO...</div>
+  <div class="carga" id="carga">
+    CARGANDO... 
+  </div> 
   <button type="button" id="cambiar_light" style="border-radius:25px; display:none; border: 1px solid white; color:white; background:aqua; margin-left:auto; padding:4px; font-size:17px">Light</button> 
   <button type="button" id="cambiar_dark" style="border-radius:25px; border: 1px solid black; background:aqua; margin-left:auto; padding:4px; font-size:17px">Dark</button> 
   <img id="logot" src="6ab9fed9-b2e6-4456-afd6-1324df407601.png"> 
@@ -123,6 +125,7 @@ var btnlinks3 = document.getElementById("enla-3");
 var imglogo = document.getElementById("logot");
 var ptlcarga = document.getElementById("carga");
 
+
 function light(){
   document.body.style.backgroundColor = "aqua";
   btnlight.style.display = "none";
@@ -144,6 +147,6 @@ function dark(){
   imglogo.src = "0810d747-4deb-4f4c-8096-4952a611f11e.png";
 }
 
-window.addEventListener("load", function(){setTimeout(function(){ptlcarga.style.display = "none"}, 2000)});
+window.addEventListener("load", function(){setTimeout(function(){ptlcarga.style.display = " none"; document.body.style.backgroundColor = "aqua"; document.body.style.transition = " 1s"}, 2000)});
 btndark.addEventListener("click", dark);
 btnlight.addEventListener("click", light);</script></body></html>
