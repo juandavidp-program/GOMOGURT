@@ -5,6 +5,7 @@
   <title>GOMOGURT</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
   <link rel="stylesheet" type="text/css" href="index.css"> 
+  <script src="https://kit.fontawesome.com/6ee99af0a5.js" crossorigin="anonymous"></script> 
   <script src="index.js"></script> 
   <link rel="icon" type="image/png" href="0810d747-4deb-4f4c-8096-4952a611f11e.png"> 
  <style type="text/css" id="dcoder_stylesheet">body {
@@ -18,14 +19,10 @@
   font-family: arial, sans-serif;
 }
 
-a {
-  color:black;
+.enlaces {
+  display:flex;
 }
 
-#enla-2, #enla-3 {
-  text-decoration: none;
-}
-   
 #enla-4 {
   transition: all 1s ease;
   margin-top:9px;
@@ -111,7 +108,7 @@ button[type="submit"]:hover:active {
  <body> 
   <div class="carga" id="carga">
     CARGANDO... 
-  </div>
+  </div> 
   <button type="button" id="cambiar_light" style="border-radius:25px; display:none; border: 1px solid white; color:white; background:aqua; margin-left:auto; padding:4px; font-size:17px">Light</button> 
   <button type="button" id="cambiar_dark" style="border-radius:25px; border: 1px solid black; background:aqua; margin-left:auto; padding:4px; font-size:17px">Dark</button> 
   <img id="logot" src="6ab9fed9-b2e6-4456-afd6-1324df407601.png"> 
@@ -126,9 +123,18 @@ button[type="submit"]:hover:active {
    </form> 
   </div> 
   <h6 id="enla-1" style="transition: all 1s ease; margin-top:30px;">¡Encuentranos en nuestras redes sociales!</h6> 
-  <a id="enla-2" style="transition: all 1s ease; margin-top:-10px;" href="https://www.facebook.com/share/1Tr2NGCWUi/">FACEBOOK</a> 
-  <a id="enla-3" style="transition: all 1s ease; margin-top:8px;" href="https://www.tiktok.com/@gomogurt?_r=1&amp;_t=ZS-94UmydW99Gh">TIKTOK</a> 
-  <a href="https://wa.me/573011246134" id="enla-4">CONTACTANOS POR WSP</a>
+  <div id="enlaces" style="margin-top:-10px; margin-left:21px;"> 
+   <a id="enla-2" style="color:blue; transition: all 1s ease; margin-top:10px;" href="https://www.facebook.com/share/1Tr2NGCWUi/">FACEBOOK</a> 
+   <i class="fa-brands fa-facebook" style="transition: all 1s ease;" id="icono-fac"></i> 
+  </div> 
+  <div id="enlaces" style="margin-top:7px; margin-left:21px;"> 
+   <a id="enla-3" style="transition: all 1s ease; margin-top:15px; color:black;" href="https://www.tiktok.com/@gomogurt?_r=1&amp;_t=ZS-94UmydW99Gh">TIKTOK</a> 
+   <i class="fa-brands fa-tiktok" id="icono-tik" style="transition: all 1s ease;"></i> 
+  </div> 
+  <div id="enlaces" style="margin-left:21px; margin-top:7px;"> 
+   <a href="https://wa.me/573011246134" style="color:green;" id="enla-4">CONTACTANOS POR WSP</a> 
+   <i class="fa-brands fa-whatsapp" style="transition: all 1s ease;" id="icono-ws"></i> 
+  </div> 
  
 <script type="text/javascript" id="dcoder_script">var btndark = document.getElementById("cambiar_dark");
 var btnlight = document.getElementById("cambiar_light");
@@ -137,18 +143,26 @@ var btnlinks1 = document.getElementById("enla-1");
 var btnlinks2 = document.getElementById("enla-2");
 var btnlinks3 = document.getElementById("enla-3");
 var btnws = document.getElementById("enla-4")
+var icofa = document.getElementById("icono-fac");
+var icotik = document.getElementById("icono-tik");
+var icows = document.getElementById("icono-ws");
 var imglogo = document.getElementById("logot");
 var ptlcarga = document.getElementById("carga");
 
+icows.style.color = "green";
+icofa.style.color = "blue";
 
 function light(){
   document.body.style.backgroundColor = "aqua";
   btnlight.style.display = "none";
   btndark.style.display = "block";
   btnlinks1.style.color = "black";
-  btnlinks2.style.color = "black";
+  btnlinks2.style.color = "blue";
   btnlinks3.style.color = "black";
-  btnws.style.color = "black";
+  btnws.style.color = "green";
+  icofa.style.color = "blue";
+  icotik.style.color = "black";
+  icows.style.color = "green";
   imglogo.src = "6ab9fed9-b2e6-4456-afd6-1324df407601.png";
 }
 
@@ -161,6 +175,9 @@ function dark(){
   btnlinks2.style.color = "white";
   btnlinks3.style.color = "white";
   btnws.style.color = "white"
+  icofa.style.color = "white";
+  icotik.style.color = "white";
+  icows.style.color = "white";
   imglogo.src = "0810d747-4deb-4f4c-8096-4952a611f11e.png";
 }
 
